@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studysprint
+  labels:
+    app: studysprint
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: studysprint
+  template:
+    metadata:
+      labels:
+        app: studysprint
+    spec:
+      containers:
+        - name: studysprint
+          image: studysprint:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "81b85981-53ce-481d-856f-c1f78a137d14",
+    "title": "Finish Devops Assignment",
+    "category": "Assignment",
+    "priority": "High",
+    "completed": true,
+    "createdAt": "2026-10-08T03:35:58.564573+00:00"
+  },
+  {
+    "id": "6cfd6043-fd14-417c-9312-3e8e51a3daf3",
+    "title": "UIUX MINI PROJECT",
+    "category": "Seminar",
+    "priority": "Medium",
+    "completed": true,
+    "createdAt": "2026-10-07T03:44:00.072Z"
+  },
+  {
+    "id": "sample-cpp-lab",
+    "title": "Prepare C++ Lab Exam",
+    "category": "Exam Preparation",
+    "priority": "High",
+    "completed": true,
+    "createdAt": "2026-10-07T09:00:00.000Z"
+  },
+  {
+    "id": "sample-web-project",
+    "title": "Complete Web Development Project",
+    "category": "Project",
+    "priority": "High",
+    "completed": false,
+    "createdAt": "2026-10-07T09:00:00.000Z"
+  },
+  {
+    "id": "sample-placement",
+    "title": "Practice Placement Aptitude",
+    "category": "Placement",
+    "priority": "Low",
+    "completed": false,
+    "createdAt": "2026-10-07T09:00:00.000Z"
+  }
+]

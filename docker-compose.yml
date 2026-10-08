@@ -1,0 +1,9 @@
+services:
+  studysprint:
+    build: .
+    image: studysprint:1.0
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./server/tasks.json:/app/server/tasks.json
+    restart: unless-stopped

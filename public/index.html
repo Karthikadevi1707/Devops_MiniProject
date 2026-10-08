@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7ef">
+  <title>StudySprint | College Study Task Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="StudySprint home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>StudySprint</span>
+      </a>
+      <span class="topbar-note"><span class="live-dot"></span> Your study space</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">A little progress adds up</p>
+          <h1 id="page-title">Make room for<br><span>your next win.</span></h1>
+          <p class="intro-note">Write it down. Work through it. Feel good about getting it done.</p>
+        </div>
+        <div class="sunrise-art" aria-hidden="true">
+          <span class="sun"></span>
+          <span class="hill hill-back"></span>
+          <span class="hill hill-front"></span>
+          <span class="art-label">one step<br>at a time</span>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Task summary">
+        <article class="stat stat-total">
+          <span class="stat-label">Total tasks</span>
+          <strong id="total-count">0</strong>
+          <span class="stat-caption">on your list</span>
+        </article>
+        <article class="stat stat-done">
+          <span class="stat-label">Completed</span>
+          <strong id="completed-count">0</strong>
+          <span class="stat-caption">nice work</span>
+        </article>
+        <article class="stat stat-pending">
+          <span class="stat-label">Still to do</span>
+          <strong id="pending-count">0</strong>
+          <span class="stat-caption">you've got this</span>
+        </article>
+        <article class="stat stat-priority">
+          <span class="stat-label">High priority</span>
+          <strong id="high-count">0</strong>
+          <span class="stat-caption">keep in focus</span>
+        </article>
+      </section>
+
+      <section class="workspace" aria-labelledby="tasks-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your plan</p>
+            <h2 id="tasks-heading">Study tasks</h2>
+          </div>
+          <span class="today-label" id="today-label"></span>
+        </div>
+
+        <form class="add-form" id="task-form">
+          <div class="task-name-field">
+            <span class="input-spark" aria-hidden="true">+</span>
+            <label class="sr-only" for="task-input">What do you want to study?</label>
+            <input id="task-input" name="title" type="text" maxlength="160" placeholder="What do you want to study?" autocomplete="off" required>
+          </div>
+          <label class="sr-only" for="task-category">Task category</label>
+          <select id="task-category" name="category" required>
+            <option value="Assignment">Assignment</option>
+            <option value="Lab Work">Lab Work</option>
+            <option value="Project">Project</option>
+            <option value="Exam Preparation">Exam Preparation</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Placement">Placement</option>
+            <option value="Internship">Internship</option>
+            <option value="Other">Other</option>
+          </select>
+          <label class="sr-only" for="task-priority">Task priority</label>
+          <select id="task-priority" name="priority" required>
+            <option value="High">High priority</option>
+            <option value="Medium" selected>Medium priority</option>
+            <option value="Low">Low priority</option>
+          </select>
+          <button class="add-button" type="submit"><span aria-hidden="true">+</span> Add task</button>
+        </form>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+
+        <div class="list-toolbar">
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="pending" aria-pressed="false">To do</button>
+            <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Done</button>
+          </div>
+          <span class="task-count" id="visible-count">0 tasks</span>
+        </div>
+
+        <div class="task-list" id="task-list" aria-live="polite" aria-busy="true"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Small steps. Strong finish.</span>
+      <span>StudySprint <span aria-hidden="true">/</span> Make today count</span>
+    </footer>
+  </div>
+</body>
+</html>
